@@ -17,6 +17,6 @@
         android:gravity="center"
        android:layout_width="230dp"
        android:layout_height="wrap_content"
-       android:text="VIEW ALL"
+       android:text="VIEWSTUDENT"
        android:id="@+id/id2"/>
 </LinearLayout>

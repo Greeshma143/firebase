@@ -18,7 +18,7 @@ Button b1,b2;
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ob1=new Intent(getApplicationContext(),Views.class);
+                Intent ob1=new Intent(getApplicationContext(),Search.class);
                 startActivity(ob1);
             }
         });
