@@ -1,0 +1,22 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#2196F3"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+   <Button
+       android:gravity="center"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="ADD STUDENT"
+       android:textSize="30dp"
+       android:id="@+id/id1"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:textSize="30dp"
+        android:gravity="center"
+       android:layout_width="230dp"
+       android:layout_height="wrap_content"
+       android:text="VIEW ALL"
+       android:id="@+id/id2"/>
+</LinearLayout>
