@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Search extends AppCompatActivity {
 EditText ed1,ed3,ed4,ed5;
 Button button;
-TextView tt1,tt2,tt3,tt4;
+TextView tt1,tt2,tt3;
  String s;
  DatabaseReference databaseReference;
     @Override

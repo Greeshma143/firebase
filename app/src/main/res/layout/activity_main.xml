@@ -19,4 +19,12 @@
        android:layout_height="wrap_content"
        android:text="VIEWSTUDENT"
        android:id="@+id/id2"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:textSize="30dp"
+        android:gravity="center"
+       android:layout_width="230dp"
+       android:layout_height="wrap_content"
+       android:text="UPDATESTUDENT"
+       android:id="@+id/idb1"/>
 </LinearLayout>
