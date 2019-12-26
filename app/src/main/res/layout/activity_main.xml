@@ -25,6 +25,8 @@
         android:gravity="center"
        android:layout_width="230dp"
        android:layout_height="wrap_content"
-       android:text="UPDATESTUDENT"
+       android:text="UPDATE OR DELETE"
        android:id="@+id/idb1"/>
+
+
 </LinearLayout>

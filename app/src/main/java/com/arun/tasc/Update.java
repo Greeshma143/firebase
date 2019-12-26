@@ -19,7 +19,7 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 public class Update extends AppCompatActivity {
-Button button1,button2;
+Button button1,button2,button3;
 EditText editText1,editText3,editText4,editText5;
 TextView textView1,textView2,textView3;
 String  s1,nwname,nwncoll,nwnroll;
@@ -39,8 +39,44 @@ StudentModel studentModel;
         textView3=(TextView)findViewById(R.id.t3);
         button1=(Button)findViewById(R.id.e2);
         button2=(Button)findViewById(R.id.up);
+
+        button3=(Button)findViewById(R.id.del);
         studentModel=new StudentModel();
         databaseReference= FirebaseDatabase.getInstance().getReference().child("Students");
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                s1=editText1.getText().toString().trim();
+                Query query=databaseReference.orderByChild("adno").equalTo(s1);
+                query.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot del:dataSnapshot.getChildren())
+                        {
+                            del.getRef().removeValue();
+                            Toast.makeText(getApplicationContext(),"data succesfully deleted",Toast.LENGTH_SHORT).show();
+
+
+                        }
+                        textView1.setVisibility(View.INVISIBLE);
+                        textView2.setVisibility(View.INVISIBLE);
+                        textView3.setVisibility(View.INVISIBLE);
+                        editText5.setVisibility(View.INVISIBLE);
+                        editText3.setVisibility(View.INVISIBLE);
+                        editText4.setVisibility(View.INVISIBLE);
+
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+        });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

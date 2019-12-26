@@ -16,6 +16,8 @@ Button b1,b2,b3;
         b1=(Button)findViewById(R.id.id1);
         b2=(Button)findViewById(R.id.id2);
         b3=(Button)findViewById(R.id.idb1);
+
+
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

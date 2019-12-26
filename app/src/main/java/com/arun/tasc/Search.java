@@ -72,6 +72,7 @@ TextView tt1,tt2,tt3;
                  ed3.setVisibility(View.VISIBLE);
                  ed4.setVisibility(View.VISIBLE);
                  ed5.setVisibility(View.VISIBLE);
+
                 Toast.makeText(getApplicationContext(),s+" ",Toast.LENGTH_SHORT).show();
 
             }

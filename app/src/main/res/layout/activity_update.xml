@@ -68,5 +68,12 @@
         android:text="UPDATE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    <Button
+        android:textSize="20dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/del"
+        android:text="DELETE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
