@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class HomeFragment extends Fragment {
 
@@ -38,6 +40,7 @@ public class HomeFragment extends Fragment {
         final Button button;
         final TextView tt1,tt2,tt3;
         final String s;
+        final ImageView im;
         final DatabaseReference databaseReference;
         ed1=(EditText)root.findViewById(R.id.e1);
         button=(Button)root.findViewById(R.id.e2);
@@ -47,11 +50,13 @@ public class HomeFragment extends Fragment {
         tt1=(TextView)root.findViewById(R.id.t1);
         tt2=(TextView)root.findViewById(R.id.t2);
         tt3=(TextView)root.findViewById(R.id.t3);
+        im=(ImageView) root.findViewById(R.id.imgv);
         databaseReference= FirebaseDatabase.getInstance().getReference().child("Students");
 
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
-            public void onChanged(@Nullable String s) {        button.setOnClickListener(new View.OnClickListener() {
+            public void onChanged(@Nullable String s) {
+                button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     String s;
@@ -67,10 +72,12 @@ public class HomeFragment extends Fragment {
                                 String sname=studentModel.name;
                                 String sroll=studentModel.roll;
                                 String scol=studentModel.col;
+                                String img=studentModel.propic;
 
                                 ed3.setText(sname);
                                 ed4.setText(sroll);
                                 ed5.setText(scol);
+                                Picasso.with(getActivity()).load(img).into(im);
                             }
 
                         }

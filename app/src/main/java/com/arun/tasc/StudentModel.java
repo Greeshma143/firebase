@@ -1,16 +1,17 @@
 package com.arun.tasc;
 
 public class StudentModel {
-    public String name,roll,adno,col;
+    public String name,roll,adno,col,propic;
 
     public StudentModel() {
     }
 
-    public StudentModel(String name, String roll, String adno, String col) {
+    public StudentModel(String name, String roll, String adno, String col, String propic) {
         this.name = name;
         this.roll = roll;
         this.adno = adno;
         this.col = col;
+        this.propic = propic;
     }
 
     public String getName() {
@@ -43,5 +44,13 @@ public class StudentModel {
 
     public void setCol(String col) {
         this.col = col;
+    }
+
+    public String getPropic() {
+        return propic;
+    }
+
+    public void setPropic(String propic) {
+        this.propic = propic;
     }
 }
